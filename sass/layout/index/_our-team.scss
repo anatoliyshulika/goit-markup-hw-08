@@ -1,0 +1,7 @@
+.our-team-section {
+  background-color: var(--our-team-bg-color);
+}
+
+.staff {
+  @include grid-step(4, 30);
+}

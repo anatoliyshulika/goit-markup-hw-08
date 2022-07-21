@@ -1,0 +1,17 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-between);
+    --num-of-cards: 4;
+
+    list-style: none;
+
+    &__item {
+            flex-basis: calc((100% - (var(--space-between) * (var(--num-of-cards) - 1))) / var(--num-of-cards));
+        }
+}
+
+@mixin grid-step($numof-cards: 4, $space-bw: 30px) {
+    --num-of-cards: #{$numof-cards};
+    --space-between: #{$space-bw}px;
+}

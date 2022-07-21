@@ -1,0 +1,20 @@
+.socials {
+  --space-between: 10px;
+  width: 206px;
+}
+
+.socials__link {
+  height: 44px;
+  width: 44px;
+
+  border-radius: 50%;
+  color: var(--svg-icon-color);
+  transition: color var(--timing-function),
+    background-color var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+  }
+}

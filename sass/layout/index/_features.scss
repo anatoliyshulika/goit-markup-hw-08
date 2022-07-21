@@ -1,0 +1,20 @@
+.features {
+  @include grid-step(4, 30);
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--our-team-bg-color);
+}
+
+.features__titles {
+  margin-bottom: 10px;
+  @include fonts(14, 16, 0.03);
+  text-transform: uppercase;
+}
