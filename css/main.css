@@ -881,7 +881,7 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform var(--timing-function);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .card__overlay {
     overflow: auto;
   }
