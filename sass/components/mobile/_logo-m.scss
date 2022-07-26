@@ -1,0 +1,11 @@
+.logo-m {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  @include fonts(24, 28, 0.03);
+  text-decoration: none;
+
+  color: var(--accent-color);
+}

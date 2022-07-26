@@ -7,7 +7,123 @@
     <link rel="stylesheet" href="./dist/css/main.min.css" />
     <title>GoIT Home Work 7</title>
   </head>
-  <body>
+  <body data-noscroll>
+    <!-- --------------------------------Header mobile--------------------------------- -->
+    <header class="header-mobile">
+      <div class="container flex-between">
+        <a class="logo-m" href="./index.html" lang="en"
+          >Web<span class="header-mobile__logo-m--dark">Studio</span></a
+        >
+        <button type="button" class="menu-btn" data-menu-button>
+          <svg class="icon" width="40" height="40">
+            <use href="./images/svg/icons.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- backdrop mobile -->
+      <div class="drop-menu" data-menu>
+        <div>
+          <button
+            type="button"
+            class="menu-btn drop-menu__menu-btn"
+            data-menu-close
+          >
+            <svg class="icon" width="40" height="40">
+              <use href="./images/svg/icons.svg#close-mobile"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="menu-nav">
+              <li class="menu-nav__item">
+                <a
+                  class="menu-nav__link menu-nav__link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="menu-nav__item">
+                <a class="menu-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="menu-nav__item">
+                <a
+                  class="menu-nav__link"
+                  href="https://github.com/anatoliyshulika/goit-markup-hw-01"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- -----------------------Contacts -->
+        <div>
+          <ul class="menu-cont">
+            <li class="menu-cont__item">
+              <a class="menu-cont__tel-ref" href="tel:+380675731589"
+                >+38 067 573 1589</a
+              >
+            </li>
+            <li class="menu-cont__item">
+              <a
+                class="menu-cont__mail-ref"
+                href="mailto:shulika.anatoliy2@gmail.com"
+                lang="en"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-socials">
+            <li class="menu-socials_item">
+              <a
+                class="menu-socials__link flex-center"
+                href=""
+                target="_blank"
+                rel="noreferrer noopener"
+                lang="en"
+                aria-label="instagram"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-socials_item">
+              <a
+                class="menu-socials__link flex-center"
+                href=""
+                target="_blank"
+                rel="noreferrer noopener"
+                lang="en"
+                aria-label="twitter"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-socials_item">
+              <a
+                class="menu-socials__link flex-center"
+                href="https://www.facebook.com/profile.php?id=100005367284716"
+                target="_blank"
+                rel="noreferrer noopener"
+                lang="en"
+                aria-label="facebook"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-socials__link flex-center"
+                href="https://www.linkedin.com/in/anatoliy-shulika-77a064154"
+                target="_blank"
+                rel="noreferrer noopener"
+                lang="en"
+                aria-label="linkedin"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- -----------------------Contacts -->
+      </div>
+      <!-- backdrop mobile -->
+    </header>
+    <!-- --------------------------------Header mobile--------------------------------- -->
+
     <!-- --------------------------------Header--------------------------------- -->
     <header class="header">
       <div class="container flex-between">
@@ -44,19 +160,19 @@
         <ul class="header__contacts grid">
           <li>
             <a
-              class="header__link header__link--color"
+              class="header__tabl-link header__link--color"
               href="mailto:shulika.anatoliy2@gmail.com"
               lang="en"
             >
               <svg class="icon header__icon" width="16" height="12">
                 <use href="./images/svg/icons.svg#envelope"></use>
               </svg>
-              <span>shulika.anatoliy2@gmail.com</span>
+              <span>info@devstudio.com</span>
             </a>
           </li>
           <li>
             <a
-              class="header__link header__link--color"
+              class="header__tabl-link header__link--color"
               href="tel:+380675731589"
             >
               <svg class="icon header__icon" width="10" height="16">
@@ -74,13 +190,15 @@
     <!-- --------------------------------Main--------------------------------- -->
     <main>
       <!-- -----------------Hero -->
-      <section class="section hero">
-        <h1 class="hero-title hero__hero-title">
-          Эффективные решения для вашего бизнеса
-        </h1>
-        <button class="form-btn" type="button" data-modal-open>
-          Заказать услугу
-        </button>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <h1 class="hero-title hero__hero-title">
+            Эффективные решения для вашего бизнеса
+          </h1>
+          <button class="form-btn" type="button" data-modal-open>
+            Заказать услугу
+          </button>
+        </div>
       </section>
       <!-- ---Modal window- -->
       <div class="backdrop is-hidden" data-modal>
@@ -241,11 +359,28 @@
           <ul class="activities grid">
             <li class="grid__item">
               <div class="activities__wrapper">
-                <img
-                  src="./images/main-page/block-sheme.jpg"
-                  width="370"
-                  alt="Блок-схема рядом с компьютером"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index/activities/desc-app/webp/desc-app-370.webp      370w,
+                      ./images/index/activities/desc-app/webp/desc-app-740@2x.webp   740w,
+                      ./images/index/activities/desc-app/webp/desc-app-1110@3x.webp 1110w
+                    "
+                    type="image/webp"
+                    sizes="27vw"
+                  />
+                  <img
+                    srcset="
+                      ./images/index/activities/desc-app/jpg/desc-app-370.jpg      370w,
+                      ./images/index/activities/desc-app/jpg/desc-app-740@2x.jpg   740w,
+                      ./images/index/activities/desc-app/jpg/desc-app-1110@3x.jpg 1110w
+                    "
+                    src="./images/index/activities/desc-app/jpg/desc-app-370.jpg"
+                    alt="Блок-схема рядом с компьютером"
+                    width="370"
+                    sizes="27vw"
+                  />
+                </picture>
                 <div class="activities__inner flex-center">
                   <p class="activities__title">Десктопные приложения</p>
                 </div>
@@ -253,11 +388,28 @@
             </li>
             <li class="grid__item">
               <div class="activities__wrapper">
-                <img
-                  src="./images/main-page/mobile-app.jpg"
-                  width="370"
-                  alt="Мобильный телефон в руках и на экране ноутбука"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index/activities/mob-app/webp/mob-app-370.webp      370w,
+                      ./images/index/activities/mob-app/webp/mob-app-740@2x.webp   740w,
+                      ./images/index/activities/mob-app/webp/mob-app-1110@3x.webp 1110w
+                    "
+                    type="image/webp"
+                    sizes="27vw"
+                  />
+                  <img
+                    srcset="
+                      ./images/index/activities/mob-app/jpg/mob-app-370.jpg      370w,
+                      ./images/index/activities/mob-app/jpg/mob-app-740@2x.jpg   740w,
+                      ./images/index/activities/mob-app/jpg/mob-app-1110@3x.jpg 1110w
+                    "
+                    src="./images/index/activities/mob-app/jpg/mob-app-370.jpg"
+                    alt="Мобильный телефон в руках и на экране ноутбука"
+                    width="370"
+                    sizes="27vw"
+                  />
+                </picture>
                 <div class="activities__inner flex-center">
                   <p class="activities__title">Мобильные приложения</p>
                 </div>
@@ -265,11 +417,28 @@
             </li>
             <li class="grid__item">
               <div class="activities__wrapper">
-                <img
-                  src="./images/main-page/designig.jpg"
-                  width="370"
-                  alt="Рисунок на планешете"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index/activities/designe/webp/designe-370.webp      370w,
+                      ./images/index/activities/designe/webp/designe-740@2x.webp   740w,
+                      ./images/index/activities/designe/webp/designe-1110@3x.webp 1110w
+                    "
+                    type="image/webp"
+                    sizes="27vw"
+                  />
+                  <img
+                    srcset="
+                      ./images/index/activities/designe/jpg/designe-370.jpg      370w,
+                      ./images/index/activities/designe/jpg/designe-740@2x.jpg   740w,
+                      ./images/index/activities/designe/jpg/designe-1110@3x.jpg 1110w
+                    "
+                    src="./images/index/activities/designe/jpg/designe-370.jpg"
+                    alt="Рисунок на планешете"
+                    width="370"
+                    sizes="27vw"
+                  />
+                </picture>
                 <div class="activities__inner flex-center">
                   <p class="activities__title">Дизайнерские решения</p>
                 </div>
@@ -288,11 +457,66 @@
             <li class="grid__item">
               <div class="staff-card">
                 <!-- Игоря Демьяненко -->
-                <img
-                  src="./images/main-page/igor-demyanenko.jpg"
-                  width="270"
-                  alt="Фото Игоря Демьяненко Product Designer"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/igor/desc/igor-270.webp    1x,
+                      ./images/index/team/igor/desc/igor-540@2x.webp 2x,
+                      ./images/index/team/igor/desc/igor-810@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/igor/tablet/igor-354.webp     1x,
+                      ./images/index/team/igor/tablet/igor-708@2x.webp  2x,
+                      ./images/index/team/igor/tablet/igor-1062@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/igor/mobile/igor-450.webp     1x,
+                      ./images/index/team/igor/mobile/igor-900@2x.webp  2x,
+                      ./images/index/team/igor/mobile/igor-1350@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/igor/desc/igor-270.jpg    1x,
+                      ./images/index/team/igor/desc/igor-540@2x.jpg 2x,
+                      ./images/index/team/igor/desc/igor-810@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/igor/tablet/igor-354.jpg     1x,
+                      ./images/index/team/igor/tablet/igor-708@2x.jpg  2x,
+                      ./images/index/team/igor/tablet/igor-1062@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/igor/mobile/igor-450.jpg     1x,
+                      ./images/index/team/igor/mobile/igor-900@2x.jpg  2x,
+                      ./images/index/team/igor/mobile/igor-1350@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/index/team/igor/desc/igor-270.jpg"
+                    alt="Фото Игоря Демьяненко Product Designer"
+                  />
+                </picture>
                 <div class="staff-card__desc">
                   <h3 class="staff-card__title">Игорь Демьяненко</h3>
                   <p class="staff-card__major" lang="en">Product Designer</p>
@@ -360,11 +584,66 @@
             <li class="grid__item">
               <div class="staff-card">
                 <!-- Ольга Репина -->
-                <img
-                  src="./images/main-page/olga-repina.jpg"
-                  width="270"
-                  alt="Фото Ольги Репиной Frontend Developer"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/olga/desc/olga-270.webp    1x,
+                      ./images/index/team/olga/desc/olga-540@2x.webp 2x,
+                      ./images/index/team/olga/desc/olga-810@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/olga/tablet/olga-354.webp     1x,
+                      ./images/index/team/olga/tablet/olga-708@2x.webp  2x,
+                      ./images/index/team/olga/tablet/olga-1062@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/olga/mobile/olga-450.webp     1x,
+                      ./images/index/team/olga/mobile/olga-900@2x.webp  2x,
+                      ./images/index/team/olga/mobile/olga-1350@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/olga/desc/olga-270.jpg    1x,
+                      ./images/index/team/olga/desc/olga-540@2x.jpg 2x,
+                      ./images/index/team/olga/desc/olga-810@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/olga/tablet/olga-354.jpg     1x,
+                      ./images/index/team/olga/tablet/olga-708@2x.jpg  2x,
+                      ./images/index/team/olga/tablet/olga-1062@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/olga/mobile/olga-450.jpg     1x,
+                      ./images/index/team/olga/mobile/olga-900@2x.jpg  2x,
+                      ./images/index/team/olga/mobile/olga-1350@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/index/team/olga/desc/olga-270.jpg"
+                    alt="Фото Ольги Репиной Frontend Developer"
+                  />
+                </picture>
                 <div class="staff-card__desc">
                   <h3 class="staff-card__title">Ольга Репина</h3>
                   <p class="staff-card__major" lang="en">Frontend Developer</p>
@@ -432,11 +711,66 @@
             <li class="grid__item">
               <div class="staff-card">
                 <!-- Николай Тарасов -->
-                <img
-                  src="./images/main-page/nikolai-tarasov.jpg"
-                  width="270"
-                  alt="Фото Николая Тарасова Marketing"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/nik/desc/nik-270.webp    1x,
+                      ./images/index/team/nik/desc/nik-540@2x.webp 2x,
+                      ./images/index/team/nik/desc/nik-810@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/nik/tablet/nik-354.webp     1x,
+                      ./images/index/team/nik/tablet/nik-708@2x.webp  2x,
+                      ./images/index/team/nik/tablet/nik-1062@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/nik/mobile/nik-450.webp     1x,
+                      ./images/index/team/nik/mobile/nik-900@2x.webp  2x,
+                      ./images/index/team/nik/mobile/nik-1350@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/nik/desc/nik-270.jpg    1x,
+                      ./images/index/team/nik/desc/nik-540@2x.jpg 2x,
+                      ./images/index/team/nik/desc/nik-810@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/nik/tablet/nik-354.jpg     1x,
+                      ./images/index/team/nik/tablet/nik-708@2x.jpg  2x,
+                      ./images/index/team/nik/tablet/nik-1062@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/nik/mobile/nik-450.jpg     1x,
+                      ./images/index/team/nik/mobile/nik-900@2x.jpg  2x,
+                      ./images/index/team/nik/mobile/nik-1350@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/index/team/nik/desc/nik-270.jpg"
+                    alt="Фото Николая Тарасова Marketing"
+                  />
+                </picture>
                 <div class="staff-card__desc">
                   <h3 class="staff-card__title">Николай Тарасов</h3>
                   <p class="staff-card__major" lang="en">Marketing</p>
@@ -504,11 +838,66 @@
             <li class="grid__item">
               <div class="staff-card">
                 <!-- Михаил Ермаков -->
-                <img
-                  src="./images/main-page/mikhail-ermakov.jpg"
-                  width="270"
-                  alt="Фото Михаила Ермакова UI Designer"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/mike/desc/mike-270.webp    1x,
+                      ./images/index/team/mike/desc/mike-540@2x.webp 2x,
+                      ./images/index/team/mike/desc/mike-810@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/mike/tablet/mike-354.webp     1x,
+                      ./images/index/team/mike/tablet/mike-708@2x.webp  2x,
+                      ./images/index/team/mike/tablet/mike-1062@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/mike/mobile/mike-450.webp     1x,
+                      ./images/index/team/mike/mobile/mike-900@2x.webp  2x,
+                      ./images/index/team/mike/mobile/mike-1350@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/index/team/mike/desc/mike-270.jpg    1x,
+                      ./images/index/team/mike/desc/mike-540@2x.jpg 2x,
+                      ./images/index/team/mike/desc/mike-810@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/index/team/mike/tablet/mike-354.jpg     1x,
+                      ./images/index/team/mike/tablet/mike-708@2x.jpg  2x,
+                      ./images/index/team/mike/tablet/mike-1062@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/index/team/mike/mobile/mike-450.jpg     1x,
+                      ./images/index/team/mike/mobile/mike-900@2x.jpg  2x,
+                      ./images/index/team/mike/mobile/mike-1350@3x.jpg 3x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/index/team/mike/desc/mike-270.jpg"
+                    alt="Фото Михаила Ермакова UI Designer"
+                  />
+                </picture>
                 <div class="staff-card__desc">
                   <h3 class="staff-card__title">Михаил Ермаков</h3>
                   <p class="staff-card__major" lang="en">UI Designer</p>
@@ -677,95 +1066,97 @@
     <!-- --------------------------------Footer--------------------------------- -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="address">
-          <a class="logo" href="./index.html" lang="en"
-            >Web<span class="footer__logo--white">Studio</span></a
-          >
-          <address>
-            <ul class="address__list">
-              <li class="address__item">
-                <p class="address__post">г. Киев, пр-т Леси Украинки, 26</p>
+        <div class="footer__wrapper-768">
+          <div class="address">
+            <a class="logo" href="./index.html" lang="en"
+              >Web<span class="footer__logo--white">Studio</span></a
+            >
+            <address>
+              <ul class="address__list">
+                <li class="address__item">
+                  <p class="address__post">г. Киев, пр-т Леси Украинки, 26</p>
+                </li>
+                <li class="address__item">
+                  <p>
+                    <a
+                      class="address__link"
+                      href="mailto:shulika.anatoliy2@gmail.com"
+                      lang="en"
+                      >shulika.anatoliy2@gmail.com</a
+                    >
+                  </p>
+                </li>
+                <li class="address__item">
+                  <p>
+                    <a class="address__link" href="tel:+380675731589"
+                      >+38 067 573 1589</a
+                    >
+                  </p>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__social">
+            <p class="footer__slogan">Присоединяйтесь</p>
+            <ul class="footer__socials socials grid">
+              <li>
+                <a
+                  class="socials__link socials__link--color flex-center"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  lang="en"
+                  aria-label="instagram"
+                >
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <p>
-                  <a
-                    class="address__link"
-                    href="mailto:shulika.anatoliy2@gmail.com"
-                    lang="en"
-                    >shulika.anatoliy2@gmail.com</a
-                  >
-                </p>
+              <li>
+                <a
+                  class="socials__link socials__link--color flex-center"
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  lang="en"
+                  aria-label="twitter"
+                >
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <p>
-                  <a class="address__link" href="tel:+380675731589"
-                    >+38 067 573 1589</a
-                  >
-                </p>
+              <li>
+                <a
+                  class="socials__link socials__link--color flex-center"
+                  href="https://www.facebook.com/profile.php?id=100005367284716"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  lang="en"
+                  aria-label="facebook"
+                >
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="socials__link socials__link--color flex-center"
+                  href="https://www.linkedin.com/in/anatoliy-shulika-77a064154"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  lang="en"
+                  aria-label="linkedin"
+                >
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/svg/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div>
-          <p class="footer__slogan">Присоединяйтесь</p>
-          <ul class="socials grid">
-            <li>
-              <a
-                class="socials__link socials__link--color flex-center"
-                href=""
-                target="_blank"
-                rel="noreferrer noopener"
-                lang="en"
-                aria-label="instagram"
-              >
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                class="socials__link socials__link--color flex-center"
-                href=""
-                target="_blank"
-                rel="noreferrer noopener"
-                lang="en"
-                aria-label="twitter"
-              >
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                class="socials__link socials__link--color flex-center"
-                href="https://www.facebook.com/profile.php?id=100005367284716"
-                target="_blank"
-                rel="noreferrer noopener"
-                lang="en"
-                aria-label="facebook"
-              >
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                class="socials__link socials__link--color flex-center"
-                href="https://www.linkedin.com/in/anatoliy-shulika-77a064154"
-                target="_blank"
-                rel="noreferrer noopener"
-                lang="en"
-                aria-label="linkedin"
-              >
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/svg/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer__form-wrapper">
           <strong class="footer__slogan">Подпишитесь на рассылку</strong>
@@ -790,5 +1181,6 @@
     </footer>
     <!-- --------------------------------Footer--------------------------------- -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

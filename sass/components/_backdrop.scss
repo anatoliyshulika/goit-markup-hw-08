@@ -13,6 +13,8 @@
   visibility: visible;
 
   transition: opacity var(--timing-function), visibility var(--timing-function);
+
+  overflow: auto;
 }
 
 .backdrop.is-hidden {

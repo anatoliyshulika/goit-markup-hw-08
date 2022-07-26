@@ -1,5 +1,13 @@
 .features {
-  @include grid-step(4, 30);
+  @include grid-step(1, 30);
+
+  @media screen and(min-width: 768px) {
+    @include grid-step(2, 30);
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include grid-step(4, 30);
+  }
 }
 
 .features__icon {

@@ -1,0 +1,20 @@
+.header-mobile {
+  position: relative;
+
+  border-bottom: 1px solid var(--heder-bord-color);
+  background-color: var(--white-color);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-mobile__logo-m--dark {
+  color: var(--logo-black-color);
+}
+
+.header-mobile__icon-burger {
+  &:hover {
+    fill: var(--accent-color);
+  }
+}

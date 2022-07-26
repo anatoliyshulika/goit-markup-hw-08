@@ -1,28 +1,32 @@
 .titles {
-    font-weight: 700;
-    color: var(--black-color);
+  font-weight: 700;
+  color: var(--black-color);
 }
 
 .section-titles {
-    margin-bottom: 50px;
+  margin-bottom: 30px;
 
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
+  @include fonts(28, 33, 0.03);
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(36, 42, 0.03);
+    margin-bottom: 50px;
+  }
+  text-align: center;
 }
 
 .flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon {
-    fill: currentColor;
+  fill: currentColor;
 }

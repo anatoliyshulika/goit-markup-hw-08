@@ -1,0 +1,15 @@
+.menu-btn {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  & .icon {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

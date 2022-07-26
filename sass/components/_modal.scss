@@ -4,14 +4,24 @@
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--timing-function);
+  top: 0;
+  left: 0;
 
-  min-width: 528px;
-  min-height: 581px;
+  @media screen and (min-width: 450px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--timing-function);
+  }
+
+  max-width: 450px;
+  max-height: 609px;
   padding: 40px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    max-height: 581px;
+  }
 
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -34,4 +44,8 @@
   text-align: center;
 
   color: var(--black-color);
+}
+
+.is-noscroll {
+  overflow: hidden;
 }
