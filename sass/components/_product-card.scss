@@ -1,4 +1,11 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
+
   @media screen and (min-width: 768px) {
     width: 354px;
   }
@@ -46,9 +53,6 @@
   padding: 20px 24px;
 
   background-color: var(--white-color);
-  border-right: 1px solid var(--card-border-color);
-  border-bottom: 1px solid var(--card-border-color);
-  border-left: 1px solid var(--card-border-color);
 }
 
 .card__title {
