@@ -17,5 +17,6 @@
   ],
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.autoprefix": ["defaults"],
-  "editor.guides.bracketPairs": "active"
+  "editor.guides.bracketPairs": "active",
+  "liveServer.settings.port": 5501
 }
